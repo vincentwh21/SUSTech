@@ -1,0 +1,41 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+1. (a)
+```{r cars}
+x = c(4.4, 3.9, 4.0, 4.0, 3.5, 4.1)
+y = c(78, 74, 68, 76, 73, 84)
+xy <- data.frame(duration = x, interval = y)
+
+plot(xy,pch=16,cex=0.5) #scatter plot
+title("Scatterplot between duration and interval")
+x=xy$duration
+y=xy$interval
+n=length(x)
+lm.sol=lm(y~x)
+abline(lm.sol)
+
+beta0 = 45.27626
+beta1 = 7.587549
+text(4.1, 75, labels = bquote(hat(y) == .(beta0) + .(beta1) * x),cex=0.6)
+```
+```{r}
+x = c(4.4, 3.9, 4.0, 4.0, 3.5, 4.1)
+y = c(78, 74, 68, 76, 73, 84)
+xy <- data.frame(duration = x, interval = y)
+
+plot(xy,pch=16,cex=0.5) #scatter plot
+title("Scatterplot between duration and interval")
+x=xy$duration
+y=xy$interval
+n=length(x)
+lm.sol=lm(y~x)
+abline(lm.sol)
+
+beta0 = 45.27626
+beta1 = 7.587549
+text(4.1, 75, labels = bquote(hat(y) == .(beta0) + .(beta1) * x),cex=0.6)
+```
+
